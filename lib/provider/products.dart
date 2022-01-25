@@ -1,3 +1,5 @@
+import 'dart:core';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_complete_guide/provider/product.dart';
 
@@ -37,9 +39,28 @@ class Products with ChangeNotifier {
     ),
   ];
 
+  var _showFavouriteOnly = false;
+
+  List<Product> get favouriteItems {
+    return _items.where((prodItem) => prodItem.isFavorite).toList();
+  }
+
   List<Product> get items {
+    // if (_showFavouriteOnly) {
+    //   return _items.where((prodItem) => prodItem.isFavorite).toList();
+    // }
     return [..._items];
   }
+
+  // void showFavouriteOnly() {
+  //   _showFavouriteOnly = true;
+  //   notifyListeners();
+  // }
+  //
+  // void showAll() {
+  //   _showFavouriteOnly = false;
+  //   notifyListeners();
+  // }
 
   Product findById(String id) {
     return _items.firstWhere((product) => product.id == id);
