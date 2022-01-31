@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 import '../widgets/cart_item.dart';
 
 class CartScreen extends StatelessWidget {
-  const CartScreen({Key? key}) : super(key: key);
+  const CartScreen({Key key}) : super(key: key);
 
   static const routeName = '/cart';
 
@@ -35,7 +35,7 @@ class CartScreen extends StatelessWidget {
                   Spacer(),
                   Chip(
                     label: Text(
-                      '\$${cart.totalAmount.toString()}',
+                      '\$${cart.totalAmount.toStringAsFixed(2)}',
                       style: TextStyle(
                           color: Theme.of(context)
                               .primaryTextTheme
