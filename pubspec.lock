@@ -102,10 +102,10 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.0"
-  provider:
+  providers:
     dependency: "direct dev"
     description:
-      name: provider
+      name: providers
       url: "https://pub.dartlang.org"
     source: hosted
     version: "6.0.2"
