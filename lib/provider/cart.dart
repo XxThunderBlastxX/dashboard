@@ -62,7 +62,7 @@ class Cart with ChangeNotifier {
     notifyListeners();
   }
 
-  void clear(String productId) {
+  void clear() {
     _items = {};
     notifyListeners();
   }
